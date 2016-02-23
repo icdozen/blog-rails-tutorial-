@@ -1,0 +1,19 @@
+<h2>New Article</h2>
+
+<!--o create a form within this template, you will use a form builder. The primary form builder for Rails is provided by a helper method called form_for. -->
+<!--The form needs to use a different URL in order to go somewhere else. This can be done quite simply with the :url option of form_for. -->
+<%= form_for :article, url: articles_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
